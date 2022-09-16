@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <div class="row">
+          <div class="col-3">
+            <h5>
+              <img src="images/cloudy.png" alt="weather logo" width="30" />
+              Sun
+              <p>15°/17°</p>
+              <img src="images/rainy.png" alt="weather logo" width="30" />
+              Mon
+              <p>20°/18°</p>
+              <img src="images/cloudy.png" alt="weather logo" width="30" />
+              Tue
+              <p>25°/16°</p>
+              <img src="images/lightrain.png" alt="weather logo" width="30" />
+              Wed
+              <p>22°/15°</p>
+              <img src="images/sunny.jpg" alt="weather logo" width="30" />
+              Thur
+              <p>21°/19°</p>
+            </h5>
+          </div>
+          <div class="col-9">
+            <div>
+              <header>
+                <ul class="navigation-items">
+                  <li class="navigation-item"><a href="#">Lagos</a></li>
+                  <li class="navigation-item"><a href="#">Kano</a></li>
+                  <li class="navigation-item"><a href="#">Abuja</a></li>
+                  <li class="navigation-item"><a href="#">Ibadan</a></li>
+                </ul>
+              </header>
+            </div>
+            <form id="search-form">
+              <div class="row">
+                <div class="col-6">
+                  <input
+                    id="input-form"
+                    type="search"
+                    placeholder="type a city..."
+                    class="form-control"
+                    autofocus="on"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    type="submit"
+                    value="Search"
+                    class="btn btn-primary shadow-sm"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-3">
+                  <input type="submit" value="Current" class="btn btn-success
+                  shadow-sm" class="form-control" id="current-location"
+                </div>
+              </div>
+            </form>
+            <br />
+            <br />
+
+            <h1></h1>
+            <div class="weather-detail__text" id="timeDiv">Monday 10:00</div>
+            <div class="weather-detail__text" id="descriptionDiv"></div>
+            <br />
+            <div class="row">
+              <div class="col-8">
+                <img
+                  src="images/cloudy.png"
+                  alt="weather logo"
+                  class="weather-icon"
+                />
+                <span class="tempt" id="temp"></span
+                ><span class="units"> °C </span>
+              </div>
+              <div class="col-4">
+                <div class="weather-detail__text">
+                  Humidity: <span id="humidity"></span>%
+                </div>
+                <div class="weather-detail__text">
+                  Wind: <span id="wind"></span>km/h
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
